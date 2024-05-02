@@ -15,8 +15,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use("api/auth", authRouter);
-app.use("api/story", storyRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/story", storyRouter);
 
 app.get("/api/health", (req, res) => {
   res.json({
